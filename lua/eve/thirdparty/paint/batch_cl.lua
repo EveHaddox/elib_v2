@@ -1,5 +1,5 @@
 ---@diagnostic disable: deprecated
-local paint = paint--[[@as paint]]
+local paint = eve.paint--[[@as paint]]
 ---# Batching library of paint lib 
 ---This is a really hard to explain thing, and made for experienced lua coders
 ---

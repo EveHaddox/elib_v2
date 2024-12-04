@@ -1,5 +1,5 @@
 ---@diagnostic disable: deprecated
-local paint = paint--[[@as paint]]
+local paint = eve.paint--[[@as paint]]
 
 ---	What makes paint rectangles different from surface and draw rectangles?
 ---	1) Support for linear, per-corner gradients!

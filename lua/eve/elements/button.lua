@@ -103,9 +103,9 @@ function PANEL:Paint(w, h)
         self.hover = true
     end
     
-    paint.startPanel(self)
+    eve.paint.startPanel(self)
 		mask(function()
-			paint.roundedBoxes.roundedBox(6, 0, 0, w, h, self.color)
+			eve.paint.roundedBoxes.roundedBox(6, 0, 0, w, h, self.color)
 		end,
 		function()
 			local ripple = self.rippleEffect
@@ -122,10 +122,10 @@ function PANEL:Paint(w, h)
 				local alpha = RIPPLE_START_ALPHA * (1 - percent)
 				local radius = math.max(w, h) * percent * math.sqrt(2)
 
-				paint.roundedBoxes.roundedBox(radius, rippleX - radius, rippleY - radius, radius * 2, radius * 2, ColorAlpha(PIXEL.OffsetColor(self.defColor, 22), alpha))
+				eve.paint.roundedBoxes.roundedBox(radius, rippleX - radius, rippleY - radius, radius * 2, radius * 2, ColorAlpha(PIXEL.OffsetColor(self.defColor, 22), alpha))
 			end
 		end)
-	paint.endPanel()
+        eve.paint.endPanel()
 end
 
 vgui.Register("eve.button", PANEL, "DButton")

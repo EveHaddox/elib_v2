@@ -3,7 +3,7 @@
 ---In other words: It provides you a way to make SSAA (super sampling anti aliasing) with 2D/3D meshes.
 ---@class paint.downsampling
 local downspampling = {}
-local paint = paint
+local paint = eve.paint
 
 do
 	local w, h = ScrW(), ScrH()

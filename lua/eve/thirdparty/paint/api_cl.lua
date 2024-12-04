@@ -6,7 +6,7 @@
 ---@field new paint.api.new New API for paint library. Will contain refactored api that will have better documentation, etc.
 ---@field circles paint.api.circles wrapper for Circles! library, which will use paint's functions
 local api = {}
-local paint = paint
+local paint = eve.paint
 
 ---@type boolean # Overrides (Detours) surface library
 local OVERRIDE_SURFACE = false

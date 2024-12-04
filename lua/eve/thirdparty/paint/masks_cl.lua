@@ -26,6 +26,9 @@
 ---@field source fun() # starts masking. The things you will draw there will be the alpha mask.
 ---@field destination fun() # coninues masking. The things you will draw there would be alpha masked.
 ---@field stop fun() # stops masking session and draws final result.
+
+local paint = eve.paint
+
 local masks = {}
 do
 	local w, h = ScrW(), ScrH()
@@ -105,4 +108,4 @@ do
 	end
 end
 
-paint.masks = masks
+eve.paint.masks = masks

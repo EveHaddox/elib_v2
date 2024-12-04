@@ -1,5 +1,5 @@
 ---@diagnostic disable: deprecated
-local paint = paint--[[@as paint]]
+local paint = eve.paint--[[@as paint]]
 
 --```
 --What makes paint outlines better than stencils:

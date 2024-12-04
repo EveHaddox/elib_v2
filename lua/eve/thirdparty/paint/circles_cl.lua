@@ -12,7 +12,7 @@
 ---4) They can have various curviness (squircles/SwiftUI/IOS rounded square )
 ---@class paint.circles
 local circles = {}
-local paint = paint
+local paint = eve.paint
 
 ---@param num number
 ---@param power number

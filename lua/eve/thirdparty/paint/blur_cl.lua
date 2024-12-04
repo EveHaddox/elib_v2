@@ -18,7 +18,7 @@
 
 ---@class paint.blur
 local blur = {}
-local paint = paint
+local paint = eve.paint
 
 --[[
 	Library that gets blured frame texture.

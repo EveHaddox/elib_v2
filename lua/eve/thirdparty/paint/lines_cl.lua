@@ -1,5 +1,5 @@
 ---@diagnostic disable: deprecated
-local paint = paint--[[@as paint]]
+local paint = eve.paint--[[@as paint]]
 
 ---	Lines. Why they are good?
 ---	1) They support gradients. It means that you do not need to make a lot of lines to make

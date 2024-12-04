@@ -9,7 +9,7 @@
 --- 7. Support for ellipses in path
 ---@class paint.svg
 local svg = {}
-local paint = paint
+local paint = eve.paint
 
 paint.svg = svg
 
