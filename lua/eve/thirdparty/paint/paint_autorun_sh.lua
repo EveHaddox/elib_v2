@@ -52,16 +52,6 @@ load('eve/thirdparty/paint/examples/examples_cl.lua')
 -- Load custom UI elements
 load('eve/thirdparty/paint/examples/vgui/markup_richtext_cl.lua')
 
--- Load tabs
--- Order here determines tab order
-load('eve/thirdparty/paint/examples/controls/lines_cl.lua')
-load('eve/thirdparty/paint/examples/controls/rects_cl.lua')
-load('eve/thirdparty/paint/examples/controls/rounded_boxes_cl.lua')
-load('eve/thirdparty/paint/examples/controls/outlines_cl.lua')
-load('eve/thirdparty/paint/examples/controls/batch_cl.lua')
-load('eve/thirdparty/paint/examples/controls/blur_cl.lua')
-load('eve/thirdparty/paint/examples/controls/main_cl.lua')
-
 --#endregion Load Examples
 
 local VERSION = 1.12
