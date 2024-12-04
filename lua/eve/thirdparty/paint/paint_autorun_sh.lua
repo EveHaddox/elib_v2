@@ -46,12 +46,6 @@ load('eve/thirdparty/paint/svg_cl.lua')
 load('eve/thirdparty/paint/masks_cl.lua')
 load('eve/thirdparty/paint/downsampling_cl.lua')
 
--- Load Examples
-load('eve/thirdparty/paint/examples/examples_cl.lua')
-
--- Load custom UI elements
-load('eve/thirdparty/paint/examples/vgui/markup_richtext_cl.lua')
-
 --#endregion Load Examples
 
 local VERSION = 1.12
