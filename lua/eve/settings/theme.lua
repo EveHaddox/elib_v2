@@ -1,7 +1,7 @@
 eve.theme = {
     background = Color(22, 22, 22),
     background2 = Color(24, 24, 24),
-    header = Color(30, 30, 30),
+    header = Color(28, 28, 28),
     item = Color(34, 34, 34),
 
     primary = Color(200, 47, 47),
@@ -31,3 +31,24 @@ eve.sound = {
 }
 
 eve.spacing = 10
+
+PIXEL.Colors = {
+    Background = eve.theme.background,
+    Header = eve.theme.header,
+    Scroller = Color(61, 61, 61),
+
+    PrimaryText = eve.theme.primaryText,
+    SecondaryText = eve.theme.secondaryText,
+    DisabledText = eve.theme.disabledText,
+
+    Primary = eve.theme.red,
+    Disabled = Color(180, 180, 180),
+    Positive = eve.theme.green,
+    Negative = eve.theme.red,
+
+    Gold = Color(214, 174, 34),
+    Silver = Color(192, 192, 192),
+    Bronze = Color(145, 94, 49),
+
+    Transparent = Color(0, 0, 0, 0)
+}

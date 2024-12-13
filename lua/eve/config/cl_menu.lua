@@ -367,6 +367,7 @@ concommand.Add("eve_config", eve.configmenu)
 
 hook.Add("OnPlayerChat", "openEvesConfig", function(ply, text, team, dead)
     if text == "!config" or text == "/config" then
+        if ply != LocalPlayer() or not LocalPlayer():IsSuperAdmin() then return end
         eve.configmenu()
     end
 end)
