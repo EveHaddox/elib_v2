@@ -23,7 +23,7 @@ function PANEL:Init()
         local margin = pnl.margin
 
         local color = eve.theme.primaryText
-        if self:IsHovered() then
+        if self.header.closeBtn:IsHovered() then
             color = eve.theme.negative
         end
 
