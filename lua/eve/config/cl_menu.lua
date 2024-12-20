@@ -328,6 +328,10 @@ function PANEL:Init()
 
 end
 
+function PANEL:SelectAddon(addon)
+    self.navbar:SelectItem(addon)
+end
+
 function PANEL:OnRemove()
     // making shure all unsaved data is reset
     for k, v in pairs(eve.config.unsaved) do
