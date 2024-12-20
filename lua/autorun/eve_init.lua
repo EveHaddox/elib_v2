@@ -59,6 +59,8 @@ hook.Add("PIXEL.UI.FullyLoaded", "elib", function()
 	eve.IncludeClient("elements/button")
 	eve.IncludeClient("elements/simple_button")
 	eve.IncludeClient("elements/tech_three")
+	eve.IncludeClient("elements/category")
+	eve.IncludeClient("elements/navbar")
 
 	// Tests
 	eve.IncludeClient("test/frame")
