@@ -21,14 +21,48 @@ function PANEL:PerformLayout(w, h)
     self.BaseClass.PerformLayout(self, w, h)
 end
 
-vgui.Register("eve.menu", PANEL, "eve.frame")
+function PANEL:OnRemove()
+    self:GetParent():Remove()
+end
+
+vgui.Register("eve.menuComp", PANEL, "eve.frame")
+
+local PANEL = {}
+
+function PANEL:Init()
+
+    self:Dock(FILL)
+
+    self.cat = self:Add("eve.menuComp")
+    self.cat:SetTitle("Test Frame")
+
+    local blurPassesCvar = CreateClientConVar("pixel_ui_blur_passes", "4", true, false, "Amount of passes to draw blur with. 0 to disable blur entirely.", 0, 15)
+    local blurPassesNum = blurPassesCvar:SetInt(5)
+
+end
+
+function PANEL:PerformLayout(w, h)
+    self.cat:Center()
+end
+
+function PANEL:SetSize(w, h)
+    self.cat:SetSize(w, h)
+end
+
+function PANEL:Paint(w, h)
+    PIXEL.DrawBlur(self, 0, 0, w, h)
+    surface.SetDrawColor(Color(20, 20, 20, 150))
+    surface.DrawRect(0, 0, w, h)
+end
+
+vgui.Register("eve.menu", PANEL, "DPanel")
 
 eve.tests.frame = function()
-    local frame = vgui.Create("eve.menu")
-    frame:SetSize(800, 600)
-    frame:Center()
-    frame:MakePopup()
-    frame:SetTitle("Test Frame")
+    if IsValid(eve.testFrame) then eve.testFrame:Remove() return end
+    eve.testFrame = vgui.Create("eve.menu")
+    eve.testFrame:SetSize(800, 600)
+    eve.testFrame:Center()
+    eve.testFrame:MakePopup()
 end
 
 concommand.Add("eve_frame", eve.tests.frame)
