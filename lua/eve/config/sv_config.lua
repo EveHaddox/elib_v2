@@ -27,7 +27,7 @@ function eve:GetValue(addon, id)
     local data = file.Read("eve_settings.txt", "DATA") or ""
     data = util.JSONToTable(data) or {}
 
-    if data[addon] and data[addon][id] then
+    if data[addon] != nil and data[addon][id] != nil then
         return data[addon][id]
     end
 
