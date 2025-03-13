@@ -177,7 +177,7 @@ function PANEL:Init()
 
     self.realmSelect = self:Add("PIXEL.Navbar")
     self.realmSelect:Dock(TOP)
-    self.realmSelect:SetHeight(32)
+    self.realmSelect:SetHeight(PIXEL.Scale(32))
 
     self.realmSelect:AddItem("client", "client", self.selectRealm, 1, eve.theme.primary)
     self.realmSelect:AddItem("server", "server", self.selectRealm, 2, eve.theme.primary)
@@ -190,7 +190,7 @@ function PANEL:Init()
 
     self.navbar = self:Add("PIXEL.Navbar")
     self.navbar:Dock(TOP)
-    self.navbar:SetHeight(32)
+    self.navbar:SetHeight(PIXEL.Scale(32))
 
     self.navbar.count = 0
 
