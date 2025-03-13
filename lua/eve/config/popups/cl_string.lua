@@ -76,7 +76,7 @@ function PANEL:Init()
     self.entry = self:Add("PIXEL.TextEntry")
     self.entry:Dock(BOTTOM)
     self.entry:DockMargin(8, 4, 8, 8)
-    self.entry:SetHeight(30)
+    self.entry:SetHeight(PIXEL.Scale(30))
 
     self.entry:SetNumeric(false)
     self.entry:SetValue(self.value)

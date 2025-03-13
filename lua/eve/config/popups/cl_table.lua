@@ -80,7 +80,7 @@ function PANEL:Init()
     self.addBg = self:Add("DPanel")
     self.addBg:Dock(BOTTOM)
     self.addBg:DockMargin(8, 4, 8, 8)
-    self.addBg:SetHeight(30)
+    self.addBg:SetHeight(PIXEL.Scale(30))
 
     self.addBg.Paint = function(pnl, w, h)
     end
