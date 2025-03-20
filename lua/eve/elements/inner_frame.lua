@@ -3,7 +3,14 @@ local PANEL = {}
 AccessorFunc(PANEL, "bg_color", "Color")
 AccessorFunc(PANEL, "Scale", "Scale", FORCE_BOOL)
 
-eve.CreateFont("Header", PIXEL.Scale(26))
+local function Scale(x)
+    if ScrW() < 1920 then
+        return PIXEL.Scale(x)
+    end
+    return x
+end
+
+eve.CreateFont("Header", Scale(26))
 
 function PANEL:Init()
 
@@ -24,7 +31,7 @@ function PANEL:SetTitle(text)
 end
 
 function PANEL:PerformLayout(w, h)
-    self.header:SetTall(self:GetScale() and PIXEL.Scale(30) or 30)
+    self.header:SetTall(self:GetScale() and Scale(30) or 30)
 end
 
 function PANEL:Paint(w, h)
