@@ -15,7 +15,7 @@ function eve.CreateFont(name, size, weight)
 
     hook.Add("OnScreenSizeChanged", "Eve.ReRegisterFonts", function()
         for k,v in pairs(eve.scaledFonts) do
-            Elib.RegisterFont("eve." .. k, v.font, v.size, v.weight)
+            PIXEL.RegisterFont("eve." .. k, v.font, v.size, v.weight)
         end
     end)
 

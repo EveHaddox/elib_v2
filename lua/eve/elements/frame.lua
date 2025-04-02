@@ -2,7 +2,14 @@ local PANEL = {}
 
 local matCloseBtn = Material("materials/eve/close.png")
 
-eve.CreateFont("Header", PIXEL.Scale(26))
+local function Scale(x)
+    if ScrW() < 1920 then
+        return PIXEL.Scale(x)
+    end
+    return x
+end
+
+eve.CreateFont("Header", Scale(26))
 
 function PANEL:Init()
     self.header = self:Add("Panel")
@@ -18,7 +25,7 @@ function PANEL:Init()
         self:Remove()
         surface.PlaySound(eve.sound.click)
     end
-    self.header.closeBtn.margin = PIXEL.Scale(16)
+    self.header.closeBtn.margin = Scale(16)
     self.header.closeBtn.Paint = function(pnl, w, h)
         local margin = pnl.margin
 
@@ -45,7 +52,7 @@ function PANEL:SetTitle(text)
 end
 
 function PANEL:PerformLayout(w, h)
-    self.header:SetTall(PIXEL.Scale(eve.UISizes.header.height))
+    self.header:SetTall(Scale(eve.UISizes.header.height))
     self.header.closeBtn:SetWide(self.header:GetTall())
 end
 
