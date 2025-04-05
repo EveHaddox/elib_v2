@@ -2,13 +2,13 @@ function eve.CreateFont(name, size, weight)
     eve.scaledFonts = eve.scaledFonts or {}
 
     surface.CreateFont("eve." .. name, {
-        font = "Montserrat SemiBold",
+        font = "Space Grotesk SemiBold",
         size = size or 16,
         weight = weight or 500
     })
 
     eve.scaledFonts[name] = {
-        font = "Montserrat SemiBold",
+        font = "Space Grotesk SemiBold",
         size = size or 16,
         weight = weight or 500
     }

@@ -16,6 +16,7 @@ function PANEL:Init()
     self.header:Dock(TOP)
     self.header.Paint = function(pnl, w, h)
         draw.RoundedBoxEx(6, 0, 0, w, h, eve.theme.header, true, true, false, false)
+        draw.RoundedBox(0, 0, h - 1, w, 1, PIXEL.OffsetColor(eve.theme.header, 10))
     end
 
     self.header.closeBtn = self.header:Add("DButton")
